@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "本仓库包含一篇课程论文及其可复现的分析代码，引用请参照下列条目。"
 title: "银行电话营销客户认购行为的影响因素分析——基于 Logistic 回归与 K-means 分群"
-type: report
+type: software
 authors:
   - family-names: "吴"
     given-names: "桐"
