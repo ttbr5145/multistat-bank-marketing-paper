@@ -180,26 +180,25 @@ zh <- theme_bw(base_family = "SimSun") +
 ggsave(file.path(dir_fig, "图1_上次营销结果与认购.png"),
        ggplot(d, aes(x = poutcome, fill = y)) + geom_bar(position = "fill") +
          scale_y_continuous(labels = scales::percent) +
-         labs(x = "上次营销结果", y = "构成比例", title = "图1  上次营销结果与本次认购构成", fill = "是否认购") + zh,
+         labs(x = "上次营销结果", y = "构成比例", fill = "是否认购") + zh,
        width = 6, height = 3.4, dpi = 300)
 
 ggsave(file.path(dir_fig, "图2_年龄组与认购.png"),
        ggplot(d, aes(x = ageg, fill = y)) + geom_bar(position = "fill") +
          scale_y_continuous(labels = scales::percent) +
-         labs(x = "年龄组", y = "构成比例", title = "图2  年龄组与认购构成", fill = "是否认购") + zh,
+         labs(x = "年龄组", y = "构成比例", fill = "是否认购") + zh,
        width = 6, height = 3.4, dpi = 300)
 
 ggsave(file.path(dir_fig, "图3_联系时长箱线图.png"),
        ggplot(d, aes(x = y, y = durmin, fill = y)) + geom_boxplot(show.legend = FALSE) +
          coord_cartesian(ylim = c(0, 8)) +
-         labs(x = "是否认购", y = "联系时长（分钟）", title = "图3  联系时长与认购结果") + zh,
+         labs(x = "是否认购", y = "联系时长（分钟）",) + zh,
        width = 5, height = 3.6, dpi = 300)
 
 png(file.path(dir_fig, "图4_ROC曲线对比.png"), width = 1800, height = 1500, res = 300, family = "SimSun")
 rA <- roc(d$y, fitted(mA), levels = c("否","是"), direction = "<", quiet = TRUE)
 rB <- roc(d$y, fitted(mB), levels = c("否","是"), direction = "<", quiet = TRUE)
-plot(rA, col = "#2E5A88", lwd = 2, legacy.axes = TRUE,
-     main = "图4  两个 Logistic 模型的 ROC 曲线", xlab = "1 - 特异度", ylab = "灵敏度", cex.main = 1.05)
+plot(rA, col = "#2E5A88", lwd = 2, legacy.axes = TRUE, xlab = "1 - 特异度", ylab = "灵敏度", cex.main = 1.05)
 plot(rB, col = "#C0392B", lwd = 2, add = TRUE)
 abline(0, 1, lty = 2, col = "gray50")
 legend("bottomright", bty = "n", cex = .95,
@@ -209,8 +208,7 @@ legend("bottomright", bty = "n", cex = .95,
 dev.off()
 
 png(file.path(dir_fig, "图5_聚类WSS.png"), width = 2100, height = 1500, res = 300, family = "SimSun")
-plot(1:8, wss, type = "b", pch = 19, col = "#2E5A88",
-     main = "图5  K-means 组内平方和随聚类数变化", xlab = "聚类数 k", ylab = "组内平方和 WSS")
+plot(1:8, wss, type = "b", pch = 19, col = "#2E5A88", xlab = "聚类数 k", ylab = "组内平方和 WSS")
 dev.off()
 
 ## ---------- 7. 导出 ----------
@@ -228,3 +226,4 @@ write.csv(eva_tab, file.path(dir_tab, "01_判别能力.csv"), row.names = FALSE,
 cat("图片：", length(list.files(dir_fig)), " 张；表格：", length(list.files(dir_tab)), " 个\n")
 cat("会话信息：R", R.version$major, R.version$minor, "\n")
 sink()
+
