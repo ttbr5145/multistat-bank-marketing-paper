@@ -1,0 +1,14 @@
+# 统一换行符，避免跨平台反复改动
+* text=auto eol=lf
+
+# 二进制文件不做文本处理与合并
+*.docx binary
+*.xlsx binary
+*.pdf  binary
+*.png  binary
+*.exe  binary
+
+# R 脚本与文档保持 LF
+*.R   text eol=lf
+*.md  text eol=lf
+*.csv text eol=lf
