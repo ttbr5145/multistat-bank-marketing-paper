@@ -1,8 +1,9 @@
 # 多元统计分析课程小论文 · 银行电话营销客户认购行为研究
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![R](https://img.shields.io/badge/R-4.6.0-276DC3.svg)
-![Pages](https://img.shields.io/badge/Pages-12-lightgrey.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![R 4.6.0](https://img.shields.io/badge/R-4.6.0-276DC3.svg)](#六环境与依赖)
+[![PDF](https://img.shields.io/badge/PDF-12%20pages-C0392B.svg)](%E5%B0%8F%E8%AE%BA%E6%96%87/%E5%A4%9A%E7%BB%9F%E5%B0%8F%E8%AE%BA%E6%96%87_%E5%90%B4%E6%A1%90_2024213023.pdf)
+[![DOI](https://img.shields.io/badge/cite-CITATION.cff-4B8BBE.svg)](CITATION.cff)
 
 > 《多元统计分析》课程小论文的完整工作区：课程数据、可复现的 R 分析脚本、结果图表，以及按课程格式要求排版的 Word / PDF 成稿。
 
@@ -222,7 +223,7 @@ $d.Close($false); $w.Quit()
 - **论文文字与图表**：© 2026 吴桐，保留署名权；引用请遵循学术规范。
 - **数据**：版权归 UCI Machine Learning Repository 及原作者所有，本仓库仅为课程学习目的转存，不作商业使用。
 
-引用本文时建议：
+引用元数据见 [CITATION.cff](CITATION.cff)，GitHub 会在仓库首页提供 “Cite this repository” 入口，可直接导出 APA、BibTeX 等格式。手工引用建议：
 
 ```
 吴桐. 银行电话营销客户认购行为的影响因素分析——基于 Logistic 回归与 K-means 分群[R].

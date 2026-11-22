@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "本仓库包含一篇课程论文及其可复现的分析代码，引用请参照下列条目。"
+title: "银行电话营销客户认购行为的影响因素分析——基于 Logistic 回归与 K-means 分群"
+type: report
+authors:
+  - family-names: "吴"
+    given-names: "桐"
+    affiliation: "东北林业大学 数学与应用数学 2024-02 班"
+    email: "105585207+ttbr5145@users.noreply.github.com"
+repository-code: "https://github.com/ttbr5145/multistat-bank-marketing-paper"
+url: "https://github.com/ttbr5145/multistat-bank-marketing-paper"
+license: MIT
+date-released: "2026-11-22"
+version: "1.0.0"
+keywords:
+  - 多元统计分析
+  - 银行电话营销
+  - 认购预测
+  - Logistic 回归
+  - 卡方检验
+  - 客户分群
+abstract: >-
+  以葡萄牙某银行 2008 年 5 月至 2010 年 11 月电话直销活动的 45211 条客户记录为对象，
+  考察客户认购定期存款的影响因素并建立可用于外呼名单筛选的判别模型。样本认购率为 11.70%，
+  类别明显不平衡。按变量可得时点建立两个 Logistic 模型：模型 A 仅使用拨打前信息，
+  AUC 为 0.7491；模型 B 纳入通话时长后 AUC 升至 0.9037，但该变量不能用于事前筛选。
+  模型 A 表明上次营销成功者的认购优势比约为参照组的 9.20 倍，3 月联系的优势比为 2.88，
+  5 月仅为 0.38。K-means 将客户分为四类，其中高互动群体占 9.10%，认购率达 45.52%。
